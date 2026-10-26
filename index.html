@@ -796,6 +796,44 @@ dialog.rm[open]{animation:rmIn .32s cubic-bezier(.2,.9,.3,1.2)}
   .logos{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.tick-t,.shiftarrow .ball,.prog::after,.rail-svg .train,.rail-svg .wheel,.rail-svg .steam{animation:none!important}.tick{overflow-x:auto}.rail-svg .train{transform:translateX(560px)}}
+
+/* Card headings: no browser default margin */
+.flag h4{margin:0}
+/* Phone layout */
+@media (max-width:640px){
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+  .head{backdrop-filter:none;background:#fff}
+  .head .wrap{padding-block:10px}
+  .tabs{position:fixed;left:0;right:0;bottom:0;z-index:60;margin:0;width:auto;order:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 18px rgba(19,29,79,.08);padding:4px 4px calc(4px + env(safe-area-inset-bottom,0px))}
+  .tabs a{flex-direction:column;gap:2px;padding:7px 2px;font-size:.68rem;line-height:1.15;white-space:normal;text-align:center;justify-content:center}
+  .tabs a .ms{font-size:22px}
+  .tabs a[aria-current="page"]{color:var(--navy);background:var(--soft)}
+  .tabs a[aria-current="page"]::after{left:28%;right:28%;top:0;bottom:auto}
+  .toast{bottom:80px}
+  .keystrip .wrap{padding-inline:16px}
+  .keystrip .keyr{grid-template-columns:auto minmax(0,1fr);gap:10px}
+  .hlc-l::after{display:none}
+  .tz-areas{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 6px}
+  .tz-areas li{font-size:.64rem}
+  .sx-nav{position:static;display:flex;grid-template-columns:none;overflow-x:auto;gap:8px;padding:8px;border-radius:14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .sx-nav::-webkit-scrollbar{display:none}
+  .sx-nav button{flex:none;width:auto;white-space:nowrap;padding:6px 14px 6px 6px;gap:8px;grid-template-columns:30px auto}
+  .sx-nav button .ic{width:30px;height:30px}
+  .sx-nav button .ic .ms{font-size:18px}
+  .flag{padding:16px;gap:10px;border-radius:16px}
+  .flag h4{font-size:1.05rem}
+  .flag .fo b{font-size:1.3rem}
+  .fba dd{font-size:.86rem}
+  .step{grid-template-columns:1fr;padding-bottom:28px}
+  .step .num,.step::before{display:none}
+  .hlc-l{grid-template-columns:1fr;gap:12px}
+  .roundel{width:64px;height:64px;font-size:1.2rem}
+  .hlc-areas{padding:14px 14px;gap:8px 10px}
+  .hlc-areas li{font-size:.74rem;overflow-wrap:anywhere}
+  .hlc-areas .ms{width:26px;height:26px;font-size:15px}
+  .fw-q{padding:22px 18px 18px 20px}
+  .fw-q blockquote p{font-size:1.05rem}
+}
 </style>
 </head>
 <body>
